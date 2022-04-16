@@ -23,4 +23,12 @@ app.get('/assets/logo-3d', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/assets/logo-3d.glb'));
 });
 
+app.get('/assets/scan-me', function(req, res) {
+  res.sendFile(path.join(__dirname, '/public/assets/me-scan.glb'));
+});
+
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, './public/build', 'index.html'));
+});
+
 module.exports = app;

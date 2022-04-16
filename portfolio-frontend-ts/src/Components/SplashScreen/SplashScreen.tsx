@@ -79,7 +79,6 @@ function SplashScreen() {
             renderer.setSize(document.body.clientWidth, window.innerHeight);
         }
 
-
         var animate = function () {
             requestAnimationFrame(animate);
             controls.update();

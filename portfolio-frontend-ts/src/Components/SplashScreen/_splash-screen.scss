@@ -5,18 +5,18 @@
 
     &__arrows {
         position: absolute;
-        bottom: 1%;
+        bottom: 2%;
         left: 50%;
         transform: translate(-50%, 0%);
     }
 
     &__down-arrow {
         display: block;
-        width: 5px;
-        height: 5px;
+        width: 10px;
+        height: 10px;
         transform: rotate(45deg);
-        border-right: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
         margin: 0 0 3px 5px;
 
         animation: mouse-scroll 2s infinite;

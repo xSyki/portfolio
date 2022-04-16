@@ -5,10 +5,79 @@
     background-color: black;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    h1 {
+    &__generally {
+        // width: 35%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        padding: 50px 0px 0px 100px;
+    }
+
+    &__title {
         font-size: 5rem;
     }
+
+    &__list {
+        list-style:inside;
+    }
+
+    &__button-change {
+        background-color: transparent;
+        font-size: 2rem;
+        border: unset;
+        cursor: pointer;
+    }
+
+    &__details {
+        // width: 65%;
+        height: 100%;
+
+        padding: 50px 100px 0px 0px;
+    }
 }
+
+  @media only screen and (max-width: 750px) {
+    .portfolio {
+        height: unset;
+        width: 100%;
+    
+        background-color: black;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        &__generally {
+            // width: 35%;
+            height: unset;
+            display: flex;
+            flex-direction: column;
+    
+            padding: 50px 50px 0px 50px;
+        }
+    
+        &__details {
+            margin-top: 40px;
+            padding: 0px 50px 150px 50px;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 1250px) {
+    .portfolio {
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__button-change {
+        background-color: transparent;
+        font-size: 1.5rem;
+        border: unset;
+        cursor: pointer;
+    }
+}
+  }
