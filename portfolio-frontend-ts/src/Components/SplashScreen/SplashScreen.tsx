@@ -26,7 +26,7 @@ function SplashScreen() {
         var logo;
 
         const loader = new GLTFLoader();
-        loader.load('http://localhost:3000/assets/logo-3d', function (gltf) {
+        loader.load('/assets/logo-3d.glb', function (gltf) {
             gltf.scene.scale.set(0.5, 0.5, 0.5);
             logo = gltf.scene;
             scene.add(logo);

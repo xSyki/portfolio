@@ -32,7 +32,7 @@ function AboutMe() {
         let scan;
 
         const loader = new GLTFLoader();
-        loader.load('http://localhost:3000/assets/scan-me', function (gltf) {
+        loader.load('/assets/me-scan.glb', function (gltf) {
             // gltf.scene.scale.set(0.5, 0.5, 0.5);
             scan = gltf.scene;
             scene.add(scan);

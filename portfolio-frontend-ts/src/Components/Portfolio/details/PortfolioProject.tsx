@@ -24,12 +24,6 @@ function PortfolioProject(props) {
                         <li>
                             Scss
                         </li>
-                        <li>
-                            NodeJS
-                        </li>
-                        <li>
-                            Express
-                        </li>
                     </ul>
                 </div>
             </div>
