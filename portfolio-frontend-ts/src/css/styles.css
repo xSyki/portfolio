@@ -718,7 +718,7 @@ html {
       flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 500px) {
   .skills {
     padding: 50px 100px 100px 100px;
     height: unset;
@@ -798,10 +798,6 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     gap: 20px;
   }
 }
@@ -961,5 +957,21 @@ html {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+.not-found {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.not-found__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5rem;
 }
 /*# sourceMappingURL=styles.css.map */

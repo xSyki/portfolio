@@ -15,6 +15,9 @@ function SplashScreen() {
         controls.maxDistance = 100;
         controls.enablePan = false;
         controls.enableZoom = false;
+        if (document.body.clientWidth < 750) {
+            controls.enabled = false;
+        }
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(document.body.clientWidth, window.innerHeight);
         // document.body.appendChild(renderer.domElement);

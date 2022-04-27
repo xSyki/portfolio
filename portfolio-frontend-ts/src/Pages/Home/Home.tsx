@@ -3,8 +3,10 @@ import SplashScreen from 'Components/SplashScreen/SplashScreen';
 import Skills from 'Components/Skills/Skills';
 import Contact from 'Components/Contact/Contact';
 import Portfolio from 'Components/Portfolio/Portfolio';
-import History from 'Components/History/History';
+// import History from 'Components/History/History';
 import AboutMe from 'Components/AboutMe/AboutMe';
+
+import Socials from 'Components/Socials/Socials';
 
 function Home() {
 
@@ -16,6 +18,7 @@ function Home() {
             <Skills />
             {/* <History /> */}
             <Contact />
+            <Socials />
         </div>
     );
 }
