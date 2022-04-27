@@ -29,58 +29,12 @@
         flex-wrap: wrap;
     }
 
-    &__it {
-        // position: relative;
-        // width: 50%;
-        // height: 100%;
-    }
-
     &__sphere {
         position: relative;
         width: 40vw;
         height: 40vw;
         font-size: 25px;
     }
-
-    &__artist {
-        // width: 50%;
-        // height: 100%;
-    }
-
-    // &__categories {
-    //     justify-self: center;
-    //     width: 100%;
-    //     flex-grow: 1;
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 50px;
-    //     width: 100%;
-    // }
-
-    // &__web {
-    //     width: 100%;
-
-    //     display: flex;
-    //     flex-direction: column;
-    // }
-
-    // &__artist {
-
-    //     display: flex;
-    //     flex-direction: column;
-    // }
-
-    // &__sub-title {
-    //     font-size: 2rem;
-    //     margin-bottom: 10px;
-    // }
-
-    // &__circles {
-    //     display: flex;
-    //     gap: 10px;
-    //     width: 100%;
-    //     flex-wrap: wrap;
-    // }
 }
 
 @media only screen and (max-width: 768px) {
@@ -105,44 +59,5 @@
             height: 80vw;
             font-size: 25px;
         }
-    
-        // &__categories {
-        //     justify-self: center;
-        //     width: 100%;
-        //     flex-grow: 1;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     flex-direction: column;
-        //     gap: 50px;
-        // }
-    
-        // &__web {
-        //     width: 100%;
-        //     position: relative;
-    
-        //     display: flex;
-        //     flex-direction: column;
-        // }
-    
-        // &__artist {
-        //     position: relative;
-    
-        //     display: flex;
-        //     flex-direction: column;
-        // }
-    
-        // &__sub-title {
-        //     font-size: 2rem;
-        //     margin-bottom: 10px;
-        //     text-align: center;
-        // }
-    
-        // &__circles {
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     gap: 20px;
-        // }
     }
 }

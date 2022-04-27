@@ -1,7 +1,7 @@
 .splash-screen {
     position: relative;
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
 
     &__arrows {
         position: absolute;
@@ -148,7 +148,11 @@
 
 
 @media only screen and (max-width: 768px) {
-    canvas {
-        touch-action: auto !important;
-    }
+  .splash-screen {
+    height: unset;
+    max-height: 100vh;
+  }
+  .hand-icon {
+    display: none;
+  }
 }

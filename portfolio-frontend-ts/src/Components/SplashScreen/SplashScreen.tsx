@@ -105,9 +105,9 @@ function SplashScreen() {
     return (
         <section className="splash-screen">
 
-            <div class="hand-icon">
-                <div class="hand-icon__hand">
-                    <div class="hand-icon__circle"></div>
+            <div className="hand-icon">
+                <div className="hand-icon__hand">
+                    <div className="hand-icon__circle"></div>
                 </div>
             </div>
 

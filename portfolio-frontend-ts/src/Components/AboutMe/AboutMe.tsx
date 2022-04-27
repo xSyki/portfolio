@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { FaFileVideo } from 'react-icons/fa';
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -26,8 +25,6 @@ function AboutMe() {
         const div = document.getElementById('about-me__scan-me');
         div.innerHTML = "";
         div.appendChild(renderer.domElement);
-
-        const colorIndex: number = 0;
 
         let scan;
 
