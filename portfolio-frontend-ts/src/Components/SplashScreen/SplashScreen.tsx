@@ -80,6 +80,12 @@ function SplashScreen() {
 
             camera.updateProjectionMatrix();
             renderer.setSize(document.body.clientWidth, window.innerHeight);
+
+            if (document.body.clientWidth < 750) {
+                controls.enabled = false;
+            } else {
+                controls.enabled = true;
+            }
         }
 
         var animate = function () {
@@ -98,6 +104,13 @@ function SplashScreen() {
 
     return (
         <section className="splash-screen">
+
+            <div class="hand-icon">
+                <div class="hand-icon__hand">
+                    <div class="hand-icon__circle"></div>
+                </div>
+            </div>
+
             <div className="splash-screen__logo-3d" id="splash-screen__logo-3d"></div>
             <div className="splash-screen__arrows">
                 <span className="splash-screen__down-arrow"></span>

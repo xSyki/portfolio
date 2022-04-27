@@ -1,7 +1,7 @@
 .splash-screen {
     position: relative;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
 
     &__arrows {
         position: absolute;
@@ -35,6 +35,8 @@
         animation-delay: .3s;
         animation-direction: alternate;
     }
+
+
     
     @keyframes mouse-scroll {
         0% {
@@ -47,4 +49,106 @@
             opacity: 0;
         }
     } 
+}
+  //
+  // Hand animation
+  // --------------------------------------
+  .hand-icon {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    animation: handAnim 2s infinite;
+
+  
+  &__hand {
+    background: #fff;
+    width: 5px;
+    height: 16px;
+    border-radius: 20px;
+    position: relative;
+    left: -5px;
+    margin-bottom: 17px;
+    transform: rotate(-20deg);
+
+  
+    // hand
+    &:after {
+      content: "";
+      background: #fff;
+      width: 17px;
+      height: 18px;
+      border-radius: 4px 8px 38px 15px;
+      transform: rotate(6deg) skewY(10deg);
+      position: absolute;
+      top: 13px;
+      left: -1px;
+    }
+  
+    // thumb
+    &:before {
+      content: "";
+      background: #fff;
+      width: 6px;
+      height: 17px;
+      border-radius: 2px 40px 20px 20px;
+      position: absolute;
+      top: 12px;
+      left: -6px;
+      transform: rotate(-38deg);
+    }
+
+    }
+    
+    // circle
+    &__circle {
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      opacity: .5;
+      animation: circleAnim 2s infinite;
+    }
+
+}
+  
+  // Hand animation
+  @keyframes handAnim {
+    0% {
+    left: 48%;
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+        left: 52%;
+      opacity: 1;
+    }
+  }
+  
+  // Circle animation
+  @keyframes circleAnim {
+    0% { 
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% { 
+        transform: scale(2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0.8;
+    }
+  }
+
+
+@media only screen and (max-width: 768px) {
+    canvas {
+        touch-action: auto !important;
+    }
 }

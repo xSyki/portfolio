@@ -9,7 +9,7 @@ function AboutMe() {
 
     useEffect(() => {
         var width = document.body.clientWidth > 750 ? document.body.clientWidth / 2 : document.body.clientWidth;
-        var height = document.body.clientWidth > 750 ? window.innerHeight : window.innerHeight / 2;
+        var height = document.body.clientWidth > 750 ? window.innerHeight : document.body.clientWidth;
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
         var renderer = new THREE.WebGLRenderer();
@@ -44,7 +44,8 @@ function AboutMe() {
                 console.log(error)
             });
 
-        camera.position.z = 5;
+        camera.position.z = 4;
+
         controls.update();
 
         window.addEventListener('resize', onWindowResize, false);
@@ -54,10 +55,15 @@ function AboutMe() {
             var width = document.body.clientWidth > 750 ? document.body.clientWidth / 2 : document.body.clientWidth;
             var height = document.body.clientWidth > 750 ? window.innerHeight : window.innerHeight / 2;
 
+            if (document.body.clientWidth < 750) {
+                camera.position.z = 4;
+            }
+
             camera.aspect = width / height;
 
             camera.updateProjectionMatrix();
             renderer.setSize(width, height);
+            controls.update();
         }
 
         scene.rotation.y = -1;

@@ -139,6 +139,13 @@ html {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  canvas {
+    -ms-touch-action: auto !important;
+        touch-action: auto !important;
+  }
+}
+
 .socials {
   position: fixed;
   bottom: 0%;
@@ -148,6 +155,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 .home {
@@ -180,7 +188,6 @@ html {
 .splash-screen {
   position: relative;
   width: 100%;
-  height: 100vh;
 }
 
 .splash-screen__arrows {
@@ -246,8 +253,140 @@ html {
   }
 }
 
+.hand-icon {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-animation: handAnim 2s infinite;
+          animation: handAnim 2s infinite;
+}
+
+.hand-icon__hand {
+  background: #fff;
+  width: 5px;
+  height: 16px;
+  border-radius: 20px;
+  position: relative;
+  left: -5px;
+  margin-bottom: 17px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.hand-icon__hand:after {
+  content: "";
+  background: #fff;
+  width: 17px;
+  height: 18px;
+  border-radius: 4px 8px 38px 15px;
+  -webkit-transform: rotate(6deg) skewY(10deg);
+          transform: rotate(6deg) skewY(10deg);
+  position: absolute;
+  top: 13px;
+  left: -1px;
+}
+
+.hand-icon__hand:before {
+  content: "";
+  background: #fff;
+  width: 6px;
+  height: 17px;
+  border-radius: 2px 40px 20px 20px;
+  position: absolute;
+  top: 12px;
+  left: -6px;
+  -webkit-transform: rotate(-38deg);
+          transform: rotate(-38deg);
+}
+
+.hand-icon__circle {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  opacity: .5;
+  -webkit-animation: circleAnim 2s infinite;
+          animation: circleAnim 2s infinite;
+}
+
+@-webkit-keyframes handAnim {
+  0% {
+    left: 48%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    left: 52%;
+    opacity: 1;
+  }
+}
+
+@keyframes handAnim {
+  0% {
+    left: 48%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    left: 52%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes circleAnim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes circleAnim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  canvas {
+    -ms-touch-action: auto !important;
+        touch-action: auto !important;
+  }
+}
+
 .about-me {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: black;
   display: -webkit-box;
@@ -307,6 +446,7 @@ html {
   text-align: center;
   width: 150px;
   height: 50px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 750px) {
@@ -330,7 +470,7 @@ html {
     font-size: 3rem;
   }
   .about-me__description {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -665,60 +805,32 @@ html {
   justify-self: flex-start;
 }
 
-.skills__categories {
-  justify-self: center;
+.skills__spheres {
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 50px;
-  width: 100%;
-}
-
-.skills__web {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.skills__artist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.skills__sub-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.skills__circles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-  width: 100%;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 500px) {
+.skills__sphere {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 768px) {
   .skills {
     padding: 50px 100px 100px 100px;
     height: unset;
@@ -741,64 +853,11 @@ html {
     font-size: 5rem;
     justify-self: flex-start;
   }
-  .skills__categories {
-    justify-self: center;
-    width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 50px;
-  }
-  .skills__web {
-    width: 100%;
+  .skills__sphere {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .skills__artist {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .skills__sub-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .skills__circles {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 20px;
+    width: 80vw;
+    height: 80vw;
+    font-size: 25px;
   }
 }
 
