@@ -40,9 +40,7 @@ function PrivateBlog(props) {
                 </div>
             </div>
             <div className="portfolio-details__links">
-                <button className="portfolio-details__button"
-                    onClick={() => window.location.href = "http://blog.syki.pl"}>Link</button>
-                {/* <button className="portfolio-details__button">More</button> */}
+                <a className="portfolio-details__link" href="https://blog.syki.pl" target="_blank" rel="noopener noreferrer">Link</a>
             </div>
         </div>
     );

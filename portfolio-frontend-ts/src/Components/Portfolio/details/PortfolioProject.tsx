@@ -27,12 +27,6 @@ function PortfolioProject(props) {
                     </ul>
                 </div>
             </div>
-            {/* <div className="portfolio-details__links">
-                <button className="portfolio-details__button"
-                    onClick={() => window.location.href = "http://www.superfarmer.io"}>Link</button>
-                <button className="portfolio-details__button">More</button>
-            </div> */}
-
         </div>
     );
 }

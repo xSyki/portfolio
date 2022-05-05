@@ -65,7 +65,6 @@ function AboutMe() {
 
         scene.rotation.y = -1;
 
-
         div.addEventListener('click', () => {
 
             light.color = { b: Math.random(), g: Math.random(), r: Math.random() };

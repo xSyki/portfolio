@@ -26,9 +26,7 @@ function Ships(props) {
                 </div>
             </div>
             <div className="portfolio-details__links">
-                <button className="portfolio-details__button"
-                    onClick={() => window.location.href = "http://ships.syki.pl"}>Link</button>
-                {/* <button className="portfolio-details__button">More</button> */}
+                <a className="portfolio-details__link" href="http://ships.syki.pl" target="_blank" rel="noopener noreferrer">Link</a>
             </div>
         </div>
     );

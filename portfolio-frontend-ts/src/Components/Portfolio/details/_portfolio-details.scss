@@ -57,18 +57,16 @@
         gap: 8vw;
     }
 
-    &__button {
+    &__link {
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
+        text-decoration: none;
 
-        background-color: transparent;
         border: solid 2px white;
         width: 125px;
         font-size: 2rem;
         border-radius: 3rem;
+        padding: 5px 0px 5px 0px;
     }
 
     @keyframes super-farmer {
